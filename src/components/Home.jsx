@@ -5,15 +5,46 @@ import AlsoLike from './AlsoLike'
 
 function Home() {
   return (
-    <div className='px-8 py-4'>
-        <p className='text-gray-600 font-normal'>Cryptocurrencies / <span className='text-black'>Bitcoin</span></p>
-        <div className='w-[100%] flex space-x-4'>
-            <Left/>
-            <Right/>
+    <div className="px-8 py-4">
+      <p className="text-gray-600 font-normal">
+        Cryptocurrencies / <span className="text-black">Bitcoin</span>
+      </p>
+      {/* Main Wrapper */}
+      <div className="w-full flex flex-col">
+        {/* Left Component */}
+        <div className="order-1">
+          <Left />
         </div>
-        <AlsoLike/>
+  
+        {/* AlsoLike Section */}
+        <div className="order-2 lg:order-3">
+          <AlsoLike />
+        </div>
+  
+        {/* Right Component */}
+        <div className="order-3 lg:order-2 lg:ml-4 lg:w-[50%]">
+          <Right />
+        </div>
+      </div>
+  
+      {/* Layout above lg */}
+      <style>
+        {`
+          @media (min-width: 1024px) {
+            .flex-row-lg {
+              display: flex;
+              flex-direction: row;
+            }
+            .flex-row-lg > div {
+              flex: 1;
+            }
+          }
+        `}
+      </style>
     </div>
-  )
+  );
+  
+  
 }
 
 export default Home

@@ -79,7 +79,7 @@ function Sentiment() {
             {events.map((event, index) => (
               <div
                 key={index}
-                className="rounded-md p-4 flex items-start space-x-3"
+                className="rounded-md p-4 md:flex  items-start space-x-3 "
                 style={{
                   backgroundColor: event.bg,
                   flex: "0 0 50%",
@@ -87,7 +87,7 @@ function Sentiment() {
                 }}
               >
                 <i
-                  className={`fa-solid  text-white text-lg rounded-full py-2 px-4 ${event.icon} `}
+                  className={`fa-solid  text-white text-lg rounded-full py-2 m-auto px-3 ${event.icon} `}
                   style={{ backgroundColor: event.iconBg }}
                 ></i>
                 <div>
@@ -117,7 +117,7 @@ function Sentiment() {
         Analyst Estimates{" "}
         <img src="./infoTag.png" alt="" className="inline w-[16px]" />
       </h4>
-      <div className="flex space-x-5 items-center mb-8">
+      <div className="flex flex-col md:flex-row space-x-5 items-center mb-8">
         <h1 className="bg-[#ebf9f4] text-green-500 font-medium text-4xl px-5 py-8 text-center rounded-full">76%</h1>
         <div className="w-full"> 
             <div className="flex space-x-5 my-2 w-full text-gray-700 items-center">

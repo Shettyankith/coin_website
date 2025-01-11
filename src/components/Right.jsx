@@ -2,7 +2,8 @@ import React from "react";
 
 function Right() {
   return (
-    <div className="w-[30%]">
+    <div className="w-[85%] lg:w-[30%] ">
+      {/* lg:relative absolute md:bottom-0 bottom-[-100%] */}
       <div className=" bg-blue-700 h-fit mt-3 rounded-md flex flex-col space-y-3 text-center p-4 justify-center items-center">
         <h3 className="text-white font-medium text-2xl w-[70%]">
           Get Started with KoinX for FREE

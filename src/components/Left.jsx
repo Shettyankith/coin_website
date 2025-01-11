@@ -7,16 +7,16 @@ import Sentiment from "./Sentiment";
 
 function Left() {
   return (
-    <div className="w-[70%] bg-transparent  h-[max-content]">
+    <div className="w-[100%] lg:w-[70%] bg-transparent  h-[max-content]">
       <Chart/>
-        <div className="flex space-x-5 capitalize text-gray-500 font-normal my-3 px-3">
+        <div className="flex space-x-5 overflow-x-auto md:overflow-hidden capitalize text-gray-500 font-normal my-3 px-3">
             <p className="text-blue-900 underline">Overview</p>
-            <p>Fundamentals</p>
-            <p>New insights</p>
-            <p>sentiments</p>
-            <p>team</p>
-            <p>technicals</p>
-            <p>tokenomics</p>
+            <p className="w-[fit-content]">Fundamentals</p>
+            <p className="w-[fit-content]">New insights</p>
+            <p className="w-[fit-content]">sentiments</p>
+            <p className="w-[fit-content]">team</p>
+            <p className="w-[fit-content]">technicals</p>
+            <p className="w-[fit-content]">tokenomics</p>
         </div>
         <hr />
         <Sentiment/>

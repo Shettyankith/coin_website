@@ -36,11 +36,11 @@ function Team() {
       {team.map((member, index) => {
         return (
           <div
-            className="flex justify-center items-center space-x-4 p-2 rounded-md bg-[#e8f4fd] my-3"
+            className="md:flex justify-center items-center space-x-4 p-2 rounded-md bg-[#e8f4fd] my-3 py-6 md:py-2"
             key={index}
           >
             <div className="text-center flex flex-col justify-center items-center">
-              <img src={member.img} alt="Team member" className="rounded-md w-[250px] h-[100px] object-cover" />
+              <img src={member.img} alt="Team member" className="rounded-md w-[150px] md:w-[250px] h-[100px] object-cover" />
               <h6 className="text-black font-medium">{member.name}</h6>
               <p className="text-gray-600 font-medium">{member.designation}</p>
             </div>

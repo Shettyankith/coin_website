@@ -13,19 +13,19 @@ function About() {
         <p className='my-3'>Fermentum hendrerit imperdiet nulla viverra faucibus. Sit aliquam massa vel convallis duis ac. Mi adipiscing semper scelerisque porttitor pulvinar nunc risus. Fermentum potenti iaculis lacinia congue ipsum fames amet dui. Purus ultrices tincidunt volutpat in eget. Ullamcorper dui</p>
         <hr />
         <h2 className='text-black text-lg font-medium my-4'>Already Holding Bitcoin?</h2>
-        <div className='flex justify-center items-center space-x-5'>
-          <div className="bg-gradient-to-r from-[hsla(136,82%,72%,1)] to-[hsla(205,84%,36%,1)] rounded-md p-3 w-[50%] flex space-x-4 items-center ">
-            <img src="./profitsImg.jpg" alt="image" className='rounded-md w-[120px] h-[120px]'/>
+        <div className='flex flex-col md:flex-row justify-center items-center space-y-4 md:space-x-5'>
+          <div className="bg-gradient-to-r from-[hsla(136,82%,72%,1)] to-[hsla(205,84%,36%,1)] rounded-md p-3 md:w-[50%] w-[95%] flex space-x-4 items-center ">
+            <img src="./profitsImg.jpg" alt="image" className='rounded-md w-[120px] h-[120px] object-cover'/>
             <div>
-              <h6 className='text-white text-lg font-medium my-3'>Calculate your Profits</h6>
-              <button className='bg-white text-black rounded-md px-4 py-1 my-3 font-medium'>Check now <i class="fa-solid fa-arrow-right"></i></button>
+              <h6 className='text-white text-lg font-medium md:my-3 my-1'>Calculate your Profits</h6>
+              <button className='bg-white text-black rounded-md px-4 py-1 md:my-3 my-1 font-medium'>Check now <i class="fa-solid fa-arrow-right"></i></button>
             </div>
           </div>
-          <div className="bg-gradient-to-r from-[#ff9068] to-[#ff4b1f] rounded-md p-3  w-[50%] flex space-x-4  items-center">
-            <img src="./liabilityImg.jpg" alt="image"  className='rounded-md w-[120px] h-[120px]'/>
+          <div className="bg-gradient-to-r from-[#ff9068] to-[#ff4b1f] rounded-md p-3  md:w-[50%] w-[95%] flex space-x-4  items-center">
+            <img src="./liabilityImg.jpg" alt="image"  className='rounded-md w-[120px] h-[120px] object-cover'/>
             <div>
-              <h6 className='text-white text-lg  font-medium my-3'>Calculate your tax liability</h6>
-              <button  className='bg-white text-black rounded-md px-4 my-3 py-1 font-medium'>Check now <i class="fa-solid fa-arrow-right"></i></button>
+              <h6 className='text-white text-lg  font-medium md:my-3 my-1'>Calculate your tax liability</h6>
+              <button  className='bg-white text-black rounded-md px-4 md:my-3 my-1 py-1 font-medium'>Check now <i class="fa-solid fa-arrow-right"></i></button>
             </div>
           </div>
         </div>
