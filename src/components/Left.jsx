@@ -3,6 +3,7 @@ import Chart from "./Chart";
 import About from "./About";
 import Tokenomics from "./Tokenomics";
 import Team from "./Team";
+import Sentiment from "./Sentiment";
 
 function Left() {
   return (
@@ -18,6 +19,7 @@ function Left() {
             <p>tokenomics</p>
         </div>
         <hr />
+        <Sentiment/>
         <About/>
         <Tokenomics/>
         <Team/>
