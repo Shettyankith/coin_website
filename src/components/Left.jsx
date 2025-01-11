@@ -1,6 +1,8 @@
 import React from "react";
 import Chart from "./Chart";
 import About from "./About";
+import Tokenomics from "./Tokenomics";
+import Team from "./Team";
 
 function Left() {
   return (
@@ -17,6 +19,8 @@ function Left() {
         </div>
         <hr />
         <About/>
+        <Tokenomics/>
+        <Team/>
     </div>
   );
 }
