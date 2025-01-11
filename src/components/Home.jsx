@@ -1,6 +1,7 @@
 import React from 'react'
 import Left from './Left'
 import Right from './Right'
+import AlsoLike from './AlsoLike'
 
 function Home() {
   return (
@@ -10,6 +11,7 @@ function Home() {
             <Left/>
             <Right/>
         </div>
+        <AlsoLike/>
     </div>
   )
 }

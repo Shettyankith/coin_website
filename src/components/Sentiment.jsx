@@ -120,19 +120,19 @@ function Sentiment() {
       <div className="flex space-x-5 items-center mb-8">
         <h1 className="bg-[#ebf9f4] text-green-500 font-medium text-4xl px-5 py-8 text-center rounded-full">76%</h1>
         <div className="w-full"> 
-            <div className="flex space-x-5 w-full text-gray-700 items-center">
+            <div className="flex space-x-5 my-2 w-full text-gray-700 items-center">
                 <p>Buy</p>
-                <div className="bg-green-900 w-[70%] h-[8px] text-green-900"></div>
+                <div className="bg-green-600 w-[70%] h-[8px] "></div>
                 <p>76%</p>
             </div>
-            <div className="flex space-x-5 w-full text-gray-700 items-center">
+            <div className="flex space-x-5 my-2 w-full text-gray-700 items-center">
                 <p>Hold</p>
-                <div className="bg-gray-500 w-[10%] h-[8px] text-green-900"></div>
+                <div className="bg-gray-300 w-[10%] h-[8px] "></div>
                 <p>8%</p>
             </div>
-            <div className="flex space-x-5 w-full text-gray-700 items-center">
+            <div className="flex space-x-5 my-2 w-full text-gray-700 items-center">
                 <p>Sell</p>
-                <div className="bg-red-600 w-[20%] h-[8px] text-green-900"></div>
+                <div className="bg-red-600 w-[20%] h-[8px] "></div>
                 <p>16%</p>
             </div>
         </div>
