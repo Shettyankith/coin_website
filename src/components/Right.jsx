@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import TrendingCoin from "./TrendingCoin";
+import TrendingSkeleton from "./TrendingSkeleton";
 
 function Right() {
   // State for trending coins
@@ -14,9 +15,8 @@ function Right() {
         { headers: { accept: "application/json" } }
       );
       if (response.data) {
-        const coins = response.data.coins.slice(0, 3); 
+        const coins = response.data.coins.slice(0, 3);
         setTrendingCoins(coins);
-        console.log(coins[0]);
       }
     } catch (e) {
       console.error("Error fetching trending coins:", e);
@@ -38,7 +38,7 @@ function Right() {
           With our range of features that you can equip for free, KoinX allows
           you to be more educated and aware of your tax reports.
         </p>
-        <img src="" alt="" />
+        <img src="getStarted.png" alt="image" className="md:w-1/2 lg:w-full" />
         <button className="bg-white text-black rounded-md px-4 py-1 font-medium w-fit m-auto">
           Get Started for FREE <i className="fa-solid fa-arrow-right"></i>
         </button>
@@ -54,7 +54,11 @@ function Right() {
             <TrendingCoin key={index} coin={coin.item} />
           ))
         ) : (
-          <p className="text-gray-500">Loading trending coins...</p>
+          <>
+            <TrendingSkeleton />
+            <TrendingSkeleton />
+            <TrendingSkeleton />
+          </>
         )}
       </div>
     </div>

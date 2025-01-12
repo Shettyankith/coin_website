@@ -8,7 +8,7 @@ function Navbar() {
   <header className="flex  justify-between px-6 items-center p-2 bg-white">
     <img src="/logo.svg" alt="Logo" className="h-5 w-22 md:h-14 md:w-26 mix-blend-multiply"/> 
     <i className={`absolute top-1 md:top-4 right-6 lg:hidden fa-solid ${menu?"fa-xmark":" fa-bars"} transition-all duration-500 text-2xl`} onClick={()=>{setmenu(!menu)}}></i>
-    <ul className={` lg:top-0 absolute right-0 w-full justify-center items-center  lg:w-fit text-center lg:static lg:flex my-4 top-10 ${menu?"visible":"hidden"} transition-all duration-500 bg-white`}>
+    <ul className={` lg:top-0 absolute right-0 z-50 w-full justify-center items-center  lg:w-fit text-center lg:static lg:flex my-4 top-10 ${menu?"visible":"hidden"} transition-all duration-500 bg-white`}>
       {navElements.map((item,index)=>{
         return  <li className="my-4 lg:my-0 capitalize lg:m-4 text-center font-medium" key={index}>{item}</li>
       })}

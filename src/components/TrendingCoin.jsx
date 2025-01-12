@@ -1,7 +1,7 @@
 import React from "react";
 
 function TrendingCoin({coin}) {
-    const priceChange =coin.data?.price_change_percentage_24h?.percentage || "N/A";
+  const priceChange =coin.data.price_change_percentage_24h.usd || "N/A";
   return (
     <div className="flex items-center w-full justify-between my-4">
       <div className="flex items-center">
