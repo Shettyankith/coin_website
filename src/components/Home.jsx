@@ -29,7 +29,7 @@ function Home() {
   
       {/* Layout above lg */}
       <style>
-        {`
+       {`
           @media (min-width: 1024px) {
             .flex-row-lg {
               display: flex;
