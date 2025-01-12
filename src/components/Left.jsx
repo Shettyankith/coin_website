@@ -4,6 +4,7 @@ import About from "./About";
 import Tokenomics from "./Tokenomics";
 import Team from "./Team";
 import Sentiment from "./Sentiment";
+import Performace from "./Performace";
 
 function Left() {
   return (
@@ -19,6 +20,7 @@ function Left() {
             <p className="w-[fit-content]">tokenomics</p>
         </div>
         <hr />
+        <Performace/>
         <Sentiment/>
         <About/>
         <Tokenomics/>
