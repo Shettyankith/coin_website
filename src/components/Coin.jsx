@@ -5,8 +5,8 @@ function Coin({ coin }) {
   const price =( coin?.data?.price*100).toFixed(2);
 
   return (
-    <div className="border-gray-200 p-4 border-[1px] flex flex-col justify-around items-center rounded-md min-w-[200px] w-[fit-content] overflow-hidden">
-      <div className="flex space-x-2 items-center shrink-0">
+    <div className="border-gray-200 p-4 border-[1px] flex flex-col justify-around items-center rounded-md min-w-[250px] w-[fit-content] overflow-hidden">
+      <div className="flex space-x-2 items-center justify-even shrink-0">
         <img
           src={coin?.large}
           alt={coin?.name}
@@ -28,7 +28,7 @@ function Coin({ coin }) {
           {priceChange !== "N/A" ? `${Number(priceChange).toFixed(2)}%` : "N/A"}
         </button>
       </div>
-      <h4 className="font-medium justify-self-start w-full">{price}</h4>
+      <h4 className="font-medium justify-self-start w-full">${price}</h4>
       {coin?.data?.sparkline ? (
         <img
           src={coin?.data?.sparkline}
