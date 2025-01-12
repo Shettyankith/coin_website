@@ -60,7 +60,18 @@ function Chart() {
           </p>
         </>
       ) : (
-        <p>Loading...</p>
+        <>
+        <div className="flex space-x-2 md:space-x-5 items-center">
+          <h3 className="font-bold text-xl md:text-2xl bg-slate-200 animate-pulse py-3 px-10"></h3>
+          <p
+            className="rounded-md bg-slate-200 animate-pulse py-3 px-5"
+          >
+            
+          </p>
+          <p className="text-sm bg-slate-200 animate-pulse py-3 px-4"></p>
+        </div>
+        <p className="font-mono my-2 bg-slate-200 animate-pulse p-3 w-[40%]"></p>
+      </>
       )}
     </div>
       <hr />

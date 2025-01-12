@@ -1,10 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import TrendingCoin from "./TrendingCoin";
 
 function Right() {
+  // State for trending coins
+  const [trendingCoins, setTrendingCoins] = useState([]);
+
+  // Function to fetch trending coins
+  const getTrendingCoins = async () => {
+    try {
+      const response = await axios.get(
+        "https://api.coingecko.com/api/v3/search/trending",
+        { headers: { accept: "application/json" } }
+      );
+      if (response.data) {
+        const coins = response.data.coins.slice(0, 3); 
+        setTrendingCoins(coins);
+        console.log(coins[0]);
+      }
+    } catch (e) {
+      console.error("Error fetching trending coins:", e);
+    }
+  };
+
+  useEffect(() => {
+    getTrendingCoins();
+  }, []);
+
   return (
-    <div className="w-[85%] lg:w-[30%] ">
-      {/* lg:relative absolute md:bottom-0 bottom-[-100%] */}
-      <div className=" bg-blue-700 h-fit mt-3 rounded-md flex flex-col space-y-3 text-center p-4 justify-center items-center">
+    <div className="w-[85%] lg:w-[30%]">
+      {/* Free KoinX Section */}
+      <div className="bg-blue-700 h-fit mt-3 rounded-md flex flex-col space-y-3 text-center p-4 justify-center items-center">
         <h3 className="text-white font-medium text-2xl w-[70%]">
           Get Started with KoinX for FREE
         </h3>
@@ -14,33 +40,22 @@ function Right() {
         </p>
         <img src="" alt="" />
         <button className="bg-white text-black rounded-md px-4 py-1 font-medium w-fit m-auto">
-          Get Started for FREE <i class="fa-solid fa-arrow-right"></i>
+          Get Started for FREE <i className="fa-solid fa-arrow-right"></i>
         </button>
       </div>
 
+      {/* Trending Coins Section */}
       <div className="bg-white p-4 rounded-md my-4">
-          <h3 className="text-black text-xl font-medium mb-4">Trending Coins (24h)</h3>
-          <div className="flex items-center w-full justify-between">
-            <div className="flex items-center">
-            <img src="./bitcoin.png" alt="" className="w-[50px] h-[50px]"/>
-            <p className="font-medium">Ethereum(ETH)</p>
-            </div>
-            <button className="bg-[#ebf9f4] text-green-500 px-2 py-1 rounded-md justify-self-end"><i class="fa-solid fa-caret-up mx-1"></i> 8.21%</button>
-          </div>
-          <div className="flex items-center w-full justify-between">
-            <div className="flex items-center">
-            <img src="./bitcoin.png" alt="" className="w-[50px] h-[50px]"/>
-            <p className="font-medium">Bitcoin(BTC)</p>
-            </div>
-            <button className="bg-[#ebf9f4] text-green-500 px-2 py-1 rounded-md justify-self-end"><i class="fa-solid fa-caret-up mx-1"></i> 5.26%</button>
-          </div>
-          <div className="flex items-center w-full justify-between">
-            <div className="flex items-center">
-            <img src="./bitcoin.png" alt="" className="w-[50px] h-[50px]"/>
-            <p className="font-medium">Polygon(MATIC)</p>
-            </div>
-            <button className="bg-[#ebf9f4] text-green-500 px-2 py-1 rounded-md justify-self-end"><i class="fa-solid fa-caret-up mx-1"></i>4.32%</button>
-          </div>
+        <h3 className="text-black text-xl font-medium mb-4">
+          Trending Coins (24h)
+        </h3>
+        {trendingCoins.length > 0 ? (
+          trendingCoins.map((coin, index) => (
+            <TrendingCoin key={index} coin={coin.item} />
+          ))
+        ) : (
+          <p className="text-gray-500">Loading trending coins...</p>
+        )}
       </div>
     </div>
   );
