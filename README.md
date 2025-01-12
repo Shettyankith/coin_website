@@ -1,8 +1,39 @@
-# React + Vite
+# 💰 Cryptocurrency Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive cryptocurrency dashboard showcasing Bitcoin and related sections. The application dynamically adjusts its layout based on screen size to provide a seamless user experience.
 
-Currently, two official plugins are available:
+## ✨ Features
+- 📊 `Real-Time Cryptocurrency Data`
+- 🔍 `Detailed Views`
+- 🤝 `Recommendations Section`
+- 📱 `Responsive Design`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Technologies
+- ⚛️ `React`
+- 🎨 `Tailwind CSS`
+- 🌐 `CoinGecko API`
+
+## 📷 Screenshots
+
+### 🖥️ Desktop View
+![Desktop View](./Screenshot/s1.png)
+
+### 📱 Mobile View
+![Mobile View](./Screenshot/s2.png)
+
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Shettyankith/coin-website.git
+2. Navigate to the project directory:
+   ```bash
+   cd cryptocurrency-dashboard
+3. Install dependencies:
+   ```bash
+   npm install
+4. Run the application:
+   ```bash
+   npm start
+
