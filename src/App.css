@@ -1,3 +1,12 @@
 body{
     background-color: #eff2f5;
 }
+
+::-webkit-scrollbar { 
+    height: 4px; /* Height of the scrollbar (for horizontal scroll) */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #cddff7; /* Thumb color */
+    border-radius: 5px; /* Rounded corners for the thumb */
+  }
