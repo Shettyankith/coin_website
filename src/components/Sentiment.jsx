@@ -56,61 +56,50 @@ function Sentiment() {
         <img src="./infoTag.png" alt="" className="inline w-[16px]" />
       </h4>
       <div className="flex items-center space-x-4 mt-8">
-        {/* Previous Button */}
-        <button
-          onClick={handlePrev}
-          className={`p-2 ${
-            currentIndex === 0 ? "text-gray-400 cursor-not-allowed" : "text-black"
-          }`}
-          disabled={currentIndex === 0}
-        >
-          <i className="fa-solid fa-angle-left text-2xl"></i>
-        </button>
+       {/* Previous Button */}
+<button
+  onClick={handlePrev}
+  className={`p-2 ${currentIndex === 0 ? "text-gray-400 cursor-not-allowed" : "text-black"} z-10`}
+  disabled={currentIndex === 0}
+>
+  <i className="fa-solid fa-angle-left text-2xl"></i>
+</button>
 
-        {/* Visible Divs */}
-        <div className="overflow-hidden flex-1">
-          <div
-            className="flex transition-transform duration-500 space-x-4"
-            style={{
-              transform: `translateX(-${currentIndex * 50}%)`,
-              width: `${events.length * 25}%`,
-            }}
-          >
-            {events.map((event, index) => (
-              <div
-                key={index}
-                className="rounded-md p-4 md:flex  items-start space-x-3 "
-                style={{
-                  backgroundColor: event.bg,
-                  flex: "0 0 50%",
-                  boxSizing: "border-box",
-                }}
-              >
-                <i
-                  className={`fa-solid  text-white text-lg rounded-full py-2 m-auto px-3 ${event.icon} `}
-                  style={{ backgroundColor: event.iconBg }}
-                ></i>
-                <div>
-                  <h6 className="font-medium mb-2">{event.title}</h6>
-                  <p>{event.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+{/* Visible Divs */}
+<div className="overflow-hidden flex-1">
+  <div
+    className={`flex transition-transform duration-500 space-x-4 transform w-[${events.length * 100}%] md:w-[${events.length * 25}%]`}
+    style={{
+      transform: `translateX(-${currentIndex * (window.innerWidth < 1024 ? 100 : 50)}%)`, // Adjust transform based on screen width
+    }}
+  >
+    {events.map((event, index) => (
+      <div
+        key={index}
+        className={`rounded-md p-4 md:flex items-start space-x-3 bg-[${event.bg}] box-border w-[100%] md:w-[50%] flex-none`}
+      >
+        <i
+          className={`fa-solid text-white text-lg rounded-full py-2 m-auto px-3 ${event.icon}`}
+          style={{ backgroundColor: event.iconBg }}
+        ></i>
+        <div>
+          <h6 className="font-medium mb-2">{event.title}</h6>
+          <p>{event.description}</p>
         </div>
+      </div>
+    ))}
+  </div>
+</div>
 
-        {/* Next Button */}
-        <button
-          onClick={handleNext}
-          className={`p-2 ${
-            currentIndex === events.length - 2
-              ? "text-gray-400 cursor-not-allowed"
-              : "text-black"
-          }`}
-          disabled={currentIndex === events.length - 2}
-        >
-          <i className="fa-solid fa-angle-right text-2xl"></i>
-        </button>
+{/* Next Button */}
+<button
+  onClick={handleNext}
+  className={`p-2 ${currentIndex === events.length - 2 ? "text-gray-400 cursor-not-allowed" : "text-black"} z-10`}
+  disabled={currentIndex === events.length - 2}
+>
+  <i className="fa-solid fa-angle-right text-2xl"></i>
+</button>
+
       </div>
 
       <h4 className="text-black text-lg font-medium my-4">
